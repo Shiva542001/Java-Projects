@@ -1,0 +1,542 @@
+import java.util.Scanner;
+public class QuizGame
+{
+    public  static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Welcome! This is a Quiz Game");
+        System.out.println("Here you have to answer some question to win this game");
+        System.out.println("Round 1: Gk Quiz");
+        System.out.println("Round 2: Science Quiz");
+        System.out.println("Round 3: Math Quiz");
+        System.out.println("Enter '3' for Exit");
+        System.out.println("Enter the Round:");
+        int Round = sc.nextInt();
+          if(Round==1){
+            GkQuiz();
+        }
+        else if(Round==2){
+          ScienceQuiz();
+        }
+        else if(Round==3){
+            MathQuiz();
+        }
+        else if(Round==4){
+          System.exit(0);
+        }
+        else{
+            System.out.println("Invalid input");
+        }
+           
+    }
+    static void GkQuiz(){
+        Scanner scanner=new Scanner(System.in);
+        int level;
+        System.out.println("Choose an option to continue further");
+        System.out.println("level 1: Easy");
+        System.out.println("level 2: Medium");
+        System.out.println("level 3: Hard");
+        System.out.println("Enter '4' for Exit");
+        System.out.println("Enter the level");
+        level = scanner.nextInt();
+        String str="Delhi";
+        String str1="Mumbai";
+        String str2="H2O";
+        String str3="Jupiter";
+        String str4="Giraffe";
+        String s="Fe";
+        String s1="Au";
+        String s2="Alexander Graham Bell";
+        String s3="Pacific Ocean";
+        String a="Nitrous oxide";
+        String a1="The Himalayas";
+        String a2="Albert Einstein";
+        String a3="Nitrogen";
+
+        switch(level)
+       {
+            case 1:
+            System.out.println("Q: What is the capital of india ?");
+             String ans = scanner.next();
+            if(ans.equals(str))
+             {
+                System.out.println("What is the capital of Maharashtra?");
+                String ans1 = scanner.next();
+                if(ans1.equals(str1))
+                {
+                  System.out.println("What is the chemical symbol of water?");
+                  String ans2 = scanner.next();
+                  if(ans2.equals(str2)){
+                    System.out.println("What is the largest planet in our Solar System? ");
+                    String ans3 = scanner.next();
+                    if(ans3.equals(str3)){
+                      System.out.println("What is the tallest mammal on Earth?");
+                      String ans4= scanner.next();
+                      if(ans4.equals(str4)){
+                        System.out.println("Congratulations! You win this level. \n Your all answers are correct.");
+                      }
+                      else{
+                        System.out.println("Wrong answer\n The right answer is "+str4);
+                        System.out.println("Better luck next time");
+                      }
+                    }
+                    else{
+                      System.out.println("Wrong answer\n The right answer is "+str3);
+                      System.out.println("Better luck next time");
+                    }
+                  }
+                  else{
+                    System.out.println("Wrong answer\n The right answer is "+str2);
+                    System.out.println("Better luck next time");
+                  }
+                }
+                else{
+                  System.out.println("Wrong answer\n The right answer is "+str1);
+                  System.out.println("Better luck next time");
+                }
+              }
+            else
+             {
+               System.out.println("Wrong answer\n The right answer is "+str);
+               System.out.println("Better luck next time");
+              }
+              break;
+            case 2:
+            System.out.println("What is the chemical symbol for iron?");
+            String symbol= scanner.next();
+            if(symbol.equals(s))
+             {
+                System.out.println("What is the chemical symbol for Gold?");
+                String symbol1 = scanner.next();
+                if(symbol1.equals(s1))
+                {
+                  System.out.println("Who invented Telephone?");
+                  String invent = scanner.next();
+                  if(invent.equals(s2)){
+                    System.out.println("What is the largest ocean in the world?");
+                    String ocean= scanner.next();
+                    if(ocean.equals(s3)){
+                      System.out.println("What is the boiling point of water in degree celsius?");
+                      int val = scanner.nextInt();
+                      if(val==100){
+                        System.out.println("Congratulations! You win this level. \n Your all answers are correct.");
+                      }
+                      else{
+                        System.out.println("Wrong answer\n The right answer is 100");
+                        System.out.println("Better luck next time");
+                      }
+                    }
+                    else{
+                      System.out.println("Wrong answer\n The right answer is "+s3);
+                      System.out.println("Better luck next time");
+                    }
+                  }
+                  else{
+                    System.out.println("Wrong answer\n The right answer is "+s2);
+                    System.out.println("Better luck next time");
+                  }
+                }
+                else{
+                  System.out.println("Wrong answer\n The right answer is "+s1);
+                  System.out.println("Better luck next time");
+                }
+              }
+            else
+             {
+               System.out.println("Wrong answer\n The right answer is "+s);
+               System.out.println("Better luck next time");
+              }
+              break;
+            case 3:
+            System.out.println("What is the chemical name for laughing gas?");
+            String name = scanner.next();
+            if(name.equals(a))
+             {
+                System.out.println("Which mountain range is considered the youngest in the world?");
+                String range = scanner.next();
+                if(range.equals(a1))
+                {
+                  System.out.println("Which famous scientist developed the theory of relativity?");
+                  String theory = scanner.next();
+                  if(theory.equals(a2)){
+                    System.out.println("What is the approximate diameter of the Earth in kilometers?");
+                    int diameter = scanner.nextInt();
+                    if(diameter==12742){
+                      System.out.println("What is the most abundant gas in Earth's atmosphere?");
+                      String gas = scanner.next();
+                      if(gas.equals(a3)){
+                        System.out.println("Congratulations! You win this level. \n Your all answers are correct.");
+                      }
+                      else{
+                        System.out.println("Wrong answer\n The right answer is "+a3);
+                        System.out.println("Better luck next time");
+                      }
+                    }
+                    else{
+                      System.out.println("Wrong answer\n The right answer is 12,742");
+                      System.out.println("Better luck next time");
+                    }
+                  }
+                  else{
+                    System.out.println("Wrong answer\n The right answer is "+a2);
+                    System.out.println("Better luck next time");
+                  }
+                }
+                else{
+                  System.out.println("Wrong answer\n The right answer is "+a1);
+                  System.out.println("Better luck next time");
+                }
+              }
+            else
+             {
+               System.out.println("Wrong answer\n The right answer is "+a);
+               System.out.println("Better luck next time");
+              }
+              break;
+            case 4:
+            System.exit(0);
+            break;  
+            default:
+            System.out.println("Invalid Input");
+        }
+        scanner.close();
+
+
+    }
+    static void MathQuiz(){
+        Scanner scanner = new Scanner(System.in);
+        int level;
+        System.out.println("Choose an option to continue further");
+        System.out.println("level 1: Easy");
+        System.out.println("level 2: Medium");
+        System.out.println("level 3: Hard");
+        System.out.println("Enter '4' for Exit");
+        System.out.println("Enter the level");
+        level = scanner.nextInt();
+        int sum=175,mul=380,sub=333,div=45,num=31;
+    
+        switch(level)
+       {
+            case 1:
+            System.out.println("Q: what is the Sum of (85+90)?");
+            sum = scanner.nextInt();
+            if(sum == 175)
+             {
+                System.out.println("What is the multiplication of (95*4)?");
+                mul = scanner.nextInt();
+                if(mul == 380)
+                {
+                  System.out.println("What is the subtraction of (987-654)?");
+                  sub = scanner.nextInt();
+                  if(sub==333){
+                    System.out.println("What is the division of (225/5)?");
+                    div = scanner.nextInt();
+                    if(div==45){
+                      System.out.println("What is the answer of (105+62-34*8/2)?");
+                      num = scanner.nextInt();
+                      if(num==31){
+                        System.out.println("Congratulations! You win the game. \n Your all answers are correct.");
+                      }
+                      else{
+                        System.out.println("Wrong answer\n The right answer is 31");
+                        System.out.println("Better luck next time");
+                      }
+                    }
+                    else{
+                      System.out.println("Wrong answer\n The right answer is 45");
+                      System.out.println("Better luck next time");
+                    }
+                  }
+                  else{
+                    System.out.println("Wrong answer\n The right answer is 333");
+                    System.out.println("Better luck next time");
+                  }
+                }
+                else{
+                  System.out.println("Wrong answer\n The right answer is 380");
+                  System.out.println("Better luck next time");
+                }
+              }
+            else
+             {
+               System.out.println("Wrong answer\n The right answer is 175");
+               System.out.println("Better luck next time");
+              }
+              break;
+            case 2:
+            System.out.println("Which number is the equivalent to 3^(4)/3^(2)?");
+            int num1 = scanner.nextInt();
+            if(num1==9)
+             {
+                System.out.println("Solve the equation 3x+5=2(x-1))?");
+                int x = scanner.nextInt();
+                if(x==-7)
+                {
+                  System.out.println("If a circle has a radius of 7cm,what is its circumference to the nearest whole number?");
+                  int circum = scanner.nextInt();
+                  if(circum==44){
+                    System.out.println("What is a square root of 144?");
+                    int sqrt = scanner.nextInt();
+                    if(sqrt==12){
+                      System.out.println("Solve for x: 2x+7=3x-4?");
+                      int x1 = scanner.nextInt();
+                      if(x1==11){
+                        System.out.println("Congratulations! You win the game. \n Your all answers are correct.");
+                      }
+                      else{
+                        System.out.println("Wrong answer\n The right answer is 11");
+                        System.out.println("Better luck next time");
+                      }
+                    }
+                    else{
+                      System.out.println("Wrong answer\n The right answer is 12");
+                      System.out.println("Better luck next time");
+                    }
+                  }
+                  else{
+                    System.out.println("Wrong answer\n The right answer is 44");
+                    System.out.println("Better luck next time");
+                  }
+                }
+                else{
+                  System.out.println("Wrong answer\n The right answer is -7");
+                  System.out.println("Better luck next time");
+                }
+              }
+            else
+             {
+               System.out.println("Wrong answer\n The right answer is 9");
+               System.out.println("Better luck next time");
+              }
+              break;
+            case 3:
+            System.out.println("If a rectangle has a length of 50cm and width of 35cm.What is its area?");
+            int ans = scanner.nextInt();
+            if(ans == 1750)
+             {
+                System.out.println("What is next in the following number series:256,289,324,361,...?");
+                int series = scanner.nextInt();
+                if(series == 400)
+                {
+                  System.out.println("You are given a 3-digit number. The second digit of this number is four times bigger than the third digit. The first digit of the number is 3 less than the second digit. What is the number?");
+                  int ans1 = scanner.nextInt();
+                  if(ans1==141){
+                    System.out.println("How many hours are there in a year (rounded to the nearest hour)?");
+                    int hour = scanner.nextInt();
+                    if(hour==8760){
+                      System.out.println("A man is currently 4 times older than his son. In 10 years, the man will be three times older than his son. What is the man’s age presently?");
+                      int age = scanner.nextInt();
+                      if(age==80){
+                        System.out.println("Congratulations! You win the game. \n Your all answers are correct.");
+                      }
+                      else{
+                        System.out.println("Wrong answer\n The right answer is 80");
+                        System.out.println("Better luck next time");
+                      }
+                    }
+                    else{
+                      System.out.println("Wrong answer\n The right answer is 8760");
+                      System.out.println("Better luck next time");
+                    }
+                  }
+                  else{
+                    System.out.println("Wrong answer\n The right answer is 141");
+                    System.out.println("Better luck next time");
+                  }
+                }
+                else{
+                  System.out.println("Wrong answer\n The right answer is 400");
+                  System.out.println("Better luck next time");
+                }
+              }
+            else
+             {
+               System.out.println("Wrong answer\n The right answer is 1750");
+               System.out.println("Better luck next time");
+              }
+              break;
+            case 4:
+            System.exit(0);
+            break;  
+            default:
+            System.out.println("Invalid Input");
+        }
+        scanner.close();
+    }
+    public static void ScienceQuiz(){
+      Scanner scanner=new Scanner(System.in);
+      int level;
+      System.out.println("Choose an option to continue further");
+      System.out.println("level 1: Easy");
+      System.out.println("level 2: Medium");
+      System.out.println("level 3: Hard");
+      System.out.println("Enter '4' for Exit");
+      System.out.println("Enter the level");
+      level = scanner.nextInt();
+      String str="The stapes";
+      String str1="Photosynthesis";
+      String str2="Gravity";
+      String str3="Diamond";
+      String str4="Evaporation";
+      String s="Transpiration";
+      String s1="Atom";
+      String s2="Newton";
+      String s3="Charles Drawin and Alfred Russel Wallace";
+      String s4="Drag";
+      String a="Uranium";
+      String a1="Olympus mons";
+      String a2="Paleontology";
+      String a3="Weathering";
+      String a4="Nuclear Force";
+
+      switch(level)
+     {
+          case 1:
+          System.out.println("Q: What is the smallest bone in the human body ?");
+           String ans = scanner.next();
+          if(ans.equals(str))
+           {
+              System.out.println("What is the process by which plants make their own food called?");
+              String ans1 = scanner.next();
+              if(ans1.equals(str1))
+              {
+                System.out.println("What force keeps objects on the Earth's surface?");
+                String ans2 = scanner.next();
+                if(ans2.equals(str2)){
+                  System.out.println("What is the hardest natural substance on Earth? ");
+                  String ans3 = scanner.next();
+                  if(ans3.equals(str3)){
+                    System.out.println("What is the process by which water changes from a liquid to a gas called?");
+                    String ans4= scanner.next();
+                    if(ans4.equals(str4)){
+                      System.out.println("Congratulations! You win this level. \n Your all answers are correct.");
+                    }
+                    else{
+                      System.out.println("Wrong answer\n The right answer is "+str4);
+                      System.out.println("Better luck next time");
+                    }
+                  }
+                  else{
+                    System.out.println("Wrong answer\n The right answer is "+str3);
+                    System.out.println("Better luck next time");
+                  }
+                }
+                else{
+                  System.out.println("Wrong answer\n The right answer is "+str2);
+                  System.out.println("Better luck next time");
+                }
+              }
+              else{
+                System.out.println("Wrong answer\n The right answer is "+str1);
+                System.out.println("Better luck next time");
+              }
+            }
+          else
+           {
+             System.out.println("Wrong answer\n The right answer is "+str);
+             System.out.println("Better luck next time");
+            }
+            break;
+          case 2:
+          System.out.println("What is the process by which plants release water vapour called?");
+          String symbol= scanner.next();
+          if(symbol.equals(s))
+           {
+              System.out.println("What is the smallest unit of matter?");
+              String symbol1 = scanner.next();
+              if(symbol1.equals(s1))
+              {
+                System.out.println("What is the SI unit of force?");
+                String invent = scanner.next();
+                if(invent.equals(s2)){
+                  System.out.println("What is the name of the scientist who proposed the theory of evolution by natural selection?");
+                  String ocean= scanner.next();
+                  if(ocean.equals(s3)){
+                    System.out.println("What is the name of the force that opposes the motion of object through fluid(liquid or gas)?");
+                    String val = scanner.next();
+                    if(val.equals(s4)){
+                      System.out.println("Congratulations! You win this level. \n Your all answers are correct.");
+                    }
+                    else{
+                      System.out.println("Wrong answer\n The right answer is "+s4);
+                      System.out.println("Better luck next time");
+                    }
+                  }
+                  else{
+                    System.out.println("Wrong answer\n The right answer is "+s3);
+                    System.out.println("Better luck next time");
+                  }
+                }
+                else{
+                  System.out.println("Wrong answer\n The right answer is "+s2);
+                  System.out.println("Better luck next time");
+                }
+              }
+              else{
+                System.out.println("Wrong answer\n The right answer is "+s1);
+                System.out.println("Better luck next time");
+              }
+            }
+          else
+           {
+             System.out.println("Wrong answer\n The right answer is "+s);
+             System.out.println("Better luck next time");
+            }
+            break;
+          case 3:
+          System.out.println("What is the heviest naturally occurring element?");
+          String name = scanner.next();
+          if(name.equals(a))
+           {
+              System.out.println("Which is the name of the largest volcano in the solar system,located on Mars?");
+              String range = scanner.next();
+              if(range.equals(a1))
+              {
+                System.out.println("What is the term for the study of the fossils to understand the history of life on Earth?");
+                String theory = scanner.next();
+                if(theory.equals(a2)){
+                  System.out.println("What is the name of the process by which rocks are broken down into smaller pasrticles by wind, water,or ice?");
+                  String process = scanner.next();
+                  if(process.equals(a3)){
+                    System.out.println("What is the name of the force that holds the nucleus of an atom together?");
+                    String gas = scanner.next();
+                    if(gas.equals(a4)){
+                      System.out.println("Congratulations! You win this level. \n Your all answers are correct.");
+                    }
+                    else{
+                      System.out.println("Wrong answer\n The right answer is "+a4);
+                      System.out.println("Better luck next time");
+                    }
+                  }
+                  else{
+                    System.out.println("Wrong answer\n The right answer is "+a3);
+                    System.out.println("Better luck next time");
+                  }
+                }
+                else{
+                  System.out.println("Wrong answer\n The right answer is "+a2);
+                  System.out.println("Better luck next time");
+                }
+              }
+              else{
+                System.out.println("Wrong answer\n The right answer is "+a1);
+                System.out.println("Better luck next time");
+              }
+            }
+          else
+           {
+             System.out.println("Wrong answer\n The right answer is "+a);
+             System.out.println("Better luck next time");
+            }
+            break;
+          case 4:
+          System.exit(0);
+          break;  
+          default:
+          System.out.println("Invalid Input");
+      }
+      scanner.close();
+
+    }
+    
+}
